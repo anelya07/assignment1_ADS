@@ -87,8 +87,6 @@ class Main {
     }
 }
 
-*/
-
 //№5
 import java.util.Scanner;
 
@@ -109,6 +107,39 @@ class Main {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         System.out.println(fibonacci(num,0));
+
+    }
+}
+*/
+
+//№6
+import java.util.Scanner;
+
+class Main {
+    public static int power(int a, int n) {
+        if (a == 1) {
+            return 1;
+        }
+        if (n == 1) {
+            return a;
+        }
+        if (n == 0) {
+            return 0;
+        }
+        if (a == 0) {
+            return 0;
+        }
+        else {
+            return a*power(a, n-1);
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("Input number: ");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println("Input power of " + num + ": ");
+        int pow = sc.nextInt();
+        System.out.println(power(num,pow));
 
     }
 }
