@@ -65,7 +65,6 @@ class Main {
 
     }
 }
-*/
 
 //№4
 import java.util.Scanner;
@@ -84,6 +83,32 @@ class Main {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         System.out.println(factorial(num));
+
+    }
+}
+
+*/
+
+//№5
+import java.util.Scanner;
+
+class Main {
+    public static int fibonacci (int num, int count) {
+        if (num == 1) {
+            return 1;
+        }
+        if (num == 0) {
+            return 0;
+        }
+        else {
+            return fibonacci(num - 1, count)+fibonacci(num - 2, count);
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("Input number: ");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println(fibonacci(num,0));
 
     }
 }
