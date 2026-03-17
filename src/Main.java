@@ -36,7 +36,7 @@ class Main {
     }
 }
 
-*/
+
 
 //№3
 import java.util.Scanner;
@@ -65,6 +65,29 @@ class Main {
 
     }
 }
+*/
+
+//№4
+import java.util.Scanner;
+
+class Main {
+    public static int factorial(int num) {
+        if (num == 1) {
+            return num;
+        }
+        else {
+            return num*factorial((num-1));
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("Input number: ");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println(factorial(num));
+
+    }
+}
+
 
 
 
