@@ -1,4 +1,5 @@
-/* #1
+/*
+//#1
 class Main {
     public static int printDigit(int n) {
         if (n < 10) {
@@ -16,10 +17,7 @@ class Main {
         printDigit(5481);
     }
 }
-*/
-
-import java.util.Scanner;
-
+//№2
 class Main {
     public static int summa(int n, int arr[]) {
         if (n == arr.length) {
@@ -37,3 +35,39 @@ class Main {
 
     }
 }
+
+*/
+
+//№3
+import java.util.Scanner;
+
+class Main {
+    public static String PrimeCheck(int num, int a) {
+        if (num <= 1) {
+            return "Composite";
+        }
+        if (num == a) {
+            return "Prime";
+        }
+        if (num % a == 0) {
+            return "Composite";
+        }
+        else {
+            return PrimeCheck(num,a+1);
+        }
+
+    }
+    public static void main(String[] args) {
+        System.out.println("Input number: ");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println(PrimeCheck(num, 2));
+
+    }
+}
+
+
+
+
+
+
