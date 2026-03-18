@@ -144,8 +144,6 @@ class Main {
     }
 }
 
-*/
-
 //№7
 import java.util.Scanner;
 
@@ -182,6 +180,33 @@ class Main {
         for (int i = 0; i < size; i++) {
             System.out.print(arr[i] + " ");
         }
+
+    }
+}
+
+*/
+
+//№8
+import java.util.Scanner;
+
+class Main {
+    public static String digitCheck(String str, int index) {
+        if (index == str.length()) {
+            return "Yes";
+        }
+        if (Character.isDigit(str.charAt(index))==false) {
+            return "No";
+        }
+        else {
+            return digitCheck(str, index + 1);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter text: ");
+        String str = sc.nextLine();
+        System.out.println(digitCheck(str, 0));
+
 
     }
 }
