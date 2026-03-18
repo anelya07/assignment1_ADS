@@ -184,8 +184,6 @@ class Main {
     }
 }
 
-*/
-
 //№8
 import java.util.Scanner;
 
@@ -210,6 +208,26 @@ class Main {
 
     }
 }
+*/
 
+//№9
+import java.util.Scanner;
 
+class Main {
+    public static int characterCounter(String str, int index) {
+        if (index == str.length()) {
+            return 0;
+        }
+        else {
+            return 1 + characterCounter(str, index + 1);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter text: ");
+        String str = sc.nextLine();
+        System.out.println("Size of the text = " + characterCounter(str, 0));
+
+    }
+}
 
