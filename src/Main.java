@@ -208,7 +208,6 @@ class Main {
 
     }
 }
-*/
 
 //№9
 import java.util.Scanner;
@@ -227,6 +226,34 @@ class Main {
         System.out.println("Enter text: ");
         String str = sc.nextLine();
         System.out.println("Size of the text = " + characterCounter(str, 0));
+    }
+}
+
+*/
+
+//№10
+import java.util.Scanner;
+
+class Main {
+    public static int findGCD(int num1, int num2) {
+        if (num1 == 0) {
+            return num2;
+        }
+        if (num2 == 0) {
+            return num1;
+        }
+        else {
+            int a = num1 % num2;
+            int b = num2 % num1;
+            return findGCD(a,b);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter two numbers: ");
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        System.out.println("Greatest Common Divisor of " + num1 + " and " + num2 + " is " + findGCD(num1, num2));
 
     }
 }
